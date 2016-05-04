@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mToolbarOffScreen;
     private TextView mToolbarWithTab;
     private TextView mFelxibleSpace;
+    private TextView mFelxibleSpaceWithImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,29 +27,35 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_arrow);
 
-        mToolbarOffScreen=(TextView)findViewById(R.id.toolbar_off_screen);
-        mToolbarWithTab=(TextView)findViewById(R.id.toolbar_off_with_tab_screen);
-        mFelxibleSpace=(TextView)findViewById(R.id.flexible_space);
+        mToolbarOffScreen = (TextView) findViewById(R.id.toolbar_off_screen);
+        mToolbarWithTab = (TextView) findViewById(R.id.toolbar_off_with_tab_screen);
+        mFelxibleSpace = (TextView) findViewById(R.id.flexible_space);
+        mFelxibleSpaceWithImage = (TextView) findViewById(R.id.flexible_space_with_image);
         mToolbarOffScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this,ToolbarOffScreen.class));
+                startActivity(new Intent(MainActivity.this, ToolbarOffScreen.class));
             }
         });
 
         mToolbarWithTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ToolbarOffWithTab.class));
+                startActivity(new Intent(MainActivity.this, ToolbarOffWithTab.class));
             }
         });
 
         mFelxibleSpace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(mToolbarWithTab, "Coming soon", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(MainActivity.this, ToolbarWithFlexibleSpace.class));
+            }
+        });
+        mFelxibleSpaceWithImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FlexibleSpaceWithImage.class));
             }
         });
     }

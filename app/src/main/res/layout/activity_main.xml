@@ -68,7 +68,20 @@
             android:padding="8dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background"
-            android:text="Flexible space"
+            android:text="Flexible Space"
+            android:textColor="#212121"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/flexible_space_with_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:text="Flexible Space With Image"
             android:textColor="#212121"
             android:textSize="18sp" />
 

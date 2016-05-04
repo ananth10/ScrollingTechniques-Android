@@ -10,7 +10,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +54,17 @@ public class ToolbarOffWithTab extends AppCompatActivity {
         adapter.addFragment(new VersionListFragment(), "Tab3");
         adapter.addFragment(new VersionListFragment(), "Tab4");
         viewPager.setAdapter(adapter);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return true;
     }
 
     static class Adapter extends FragmentPagerAdapter {

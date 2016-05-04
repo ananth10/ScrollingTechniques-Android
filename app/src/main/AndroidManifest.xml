@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ToolbarOffScreen" />
-        <activity android:name=".ToolbarOffWithTab"></activity>
+        <activity android:name=".ToolbarOffWithTab" />
+        <activity android:name=".ToolbarWithFlexibleSpace" />
+        <activity android:name=".FlexibleSpaceWithImage"></activity>
     </application>
 
 </manifest>
